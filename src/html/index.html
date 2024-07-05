@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Diagnoser</title>
+    <link rel="stylesheet" href="/src/styles/styles.css">
+</head>
+<body>
+    <div class="main-div">
+        <div class="container">
+            <div class="top-part">
+                <div class="agent-details">
+                    <img src="/src/styles/pics/ai-icon-7.jpg" alt="">
+                    <div class="agent-text">
+                        <h3>AI Doc</h3>
+                        <p>Symptoms Assistant</p>
+                    </div>
+                </div>
+                <i class="bx"></i>
+            </div>
+            <div id="chat-section" class="chart-section">
+                <!-- Initial chat messages -->
+                <div class="left-part">
+                    <div class="agent-chart">
+                        <img src="/src/styles/pics/ai-icon-7.jpg" alt="">
+                        <p>Hey! what are your symptoms?</p>
+                    </div>
+                </div>
+                <div class="right-part">
+                    <div class="user-chart">
+                        <p>Hello, I'm coughing a lot!</p>
+                        <img src="/src/styles/pics/user.png" alt="">
+                    </div>
+                </div>
+                <div class="left-part">
+                    <div class="agent-chart">
+                        <img src="/src/styles/pics/ai-icon-7.jpg" alt="">
+                        <p>Have you checked for Tuberculosis before?</p>
+                    </div>
+                </div>
+                <div class="right-part">
+                    <div class="user-chart">
+                        <p>Yes, am I infected?</p>
+                        <img src="/src/styles/pics/user.png" alt="">
+                    </div>
+                </div>
+                <div class="left-part">
+                    <div class="agent-chart">
+                        <img src="/src/styles/pics/ai-icon-7.jpg" alt="">
+                        <p>Maybe, I don't know!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="user-inputs">
+                <input type="text" id="userInput" placeholder="Type here">
+                <button id="send">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="/src/modules/scripts.js"></script>
+</body>
+</html>
