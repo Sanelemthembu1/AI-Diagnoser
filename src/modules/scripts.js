@@ -283,3 +283,21 @@ document.getElementById('send').addEventListener('click', async function() {
         }*/
     }
 });
+
+//map stuff
+document.getElementById('floatingButton').addEventListener('click', function() {
+    console.log('Floating button clicked!');
+    // Add your map feature logic here
+});
+
+// Initialize the map (using any map library, for example, Google Maps or Leaflet)
+function initMap() {
+    var mapOptions = {
+        center: new google.maps.LatLng(37.7749, -122.4194),
+        zoom: 8,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+
+window.onload = initMap
