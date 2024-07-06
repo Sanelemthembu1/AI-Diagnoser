@@ -164,7 +164,7 @@ function updateSymptom(symptom) {
         userInputJson[symptom] = "1";
     }
 }
-
+//Auto ml interfacing
 async function getPrediction(data) {
     const url = 'your_automl_api_endpoint'; // Replace with your AutoML API endpoint
     
@@ -190,7 +190,7 @@ async function getPrediction(data) {
 }
 
 function processInputText(inputText, userInputJsonObject) {
-    // Initialize an empty array to store found symptom keys
+    // empty array to store found symptom keys
     let foundSymptoms = [];
 
     // Convert input text to lowercase for case-insensitive search
@@ -287,10 +287,10 @@ document.getElementById('send').addEventListener('click', async function() {
 //map stuff
 document.getElementById('floatingButton').addEventListener('click', function() {
     console.log('Floating button clicked!');
-    // Add your map feature logic here
+
 });
 
-// Initialize the map (using any map library, for example, Google Maps or Leaflet)
+// Initializing the map - not final
 function initMap() {
     var mapOptions = {
         center: new google.maps.LatLng(37.7749, -122.4194),

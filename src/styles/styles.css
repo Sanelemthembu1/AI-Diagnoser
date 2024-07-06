@@ -176,7 +176,7 @@ body, html {
     right: 5px;
     width: 60px;
     height: 60px;
-    background-color: #121213;
+    background-color: #0f0f20;
     color: white;
     border: none;
     border-radius: 50%;
@@ -190,6 +190,6 @@ body, html {
 }
 
 .floating-button:hover {
-    background-color: #1e1e22;
+    background-color: #1b1b30;
 }
 
