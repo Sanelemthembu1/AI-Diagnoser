@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Diagnoser</title>
     <link rel="stylesheet" href="/src/styles/styles.css">
+    <script type="module" src="https://unpkg.com/@googlemaps/extended-component-library@0.6"></script>
 </head>
 <body>
     <div class="main-div">
@@ -51,8 +52,9 @@
                         <p>Maybe, I don't know!</p>
                     </div>
                 </div>
+                <iframe id="mapIframe" src="https://storage.googleapis.com/maps-solutions-l1ra0py1oa/commutes/ta0f/commutes.html"
+                style="border:0; display: none;" loading="lazy"></iframe>
             </div>
-            <div id="map"></div>
             <button id="floatingButton" class="floating-button">+</button>
             <div class="user-inputs">
                 <input type="text" id="userInput" placeholder="Type here">

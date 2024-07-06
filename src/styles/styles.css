@@ -170,6 +170,39 @@ body, html {
     height: 100%;
 }
 
+
+
+/*Map stuff*/
+
+.maps {
+    /*position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;*/
+}
+  
+  .place-picker-container {
+    padding: 20px;
+  }
+
+  .container {
+    position: relative;
+}
+
+/* Map stuff */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#mapIframe {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
 .floating-button {
     position: absolute;
     bottom: 48px;
@@ -192,4 +225,3 @@ body, html {
 .floating-button:hover {
     background-color: #2a2a42;
 }
-

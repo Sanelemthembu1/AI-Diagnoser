@@ -166,7 +166,8 @@ function updateSymptom(symptom) {
 }
 //Auto ml interfacing
 async function getPrediction(data) {
-    const url = 'your_automl_api_endpoint'; // Replace with your AutoML API endpoint
+    const url = 'https://us-central1-aiplatform.googleapis.com/v1/projects/${PROJECT_ID}/locations/us-central1/endpoints/${ENDPOINT_ID}:predict \
+    -d "@${INPUT_DATA_FILE}'; // Replace with your AutoML API endpoint
     
     try {
         const response = await fetch(url, {
@@ -266,10 +267,10 @@ document.getElementById('send').addEventListener('click', async function() {
         userInputJson = processInputText(userInput, userInputJson);
 
         // Send the updated userInputJson to AutoML API
-       // const prediction = await getPrediction(userInputJson);
+       const prediction = await getPrediction(userInputJson);
 
         console.log(userInputJson);
-       // console.log(prediction);
+       console.log(prediction);
         // Simulate bot response
         setTimeout(function() {
             addBotChat('I see, you are typically suffering from __because of __.Feel free to use your map to navigate to the nearest hospital ASAP for treatment!.');
@@ -287,17 +288,23 @@ document.getElementById('send').addEventListener('click', async function() {
 //map stuff
 document.getElementById('floatingButton').addEventListener('click', function() {
     console.log('Floating button clicked!');
-
+    init();
 });
 
 // Initializing the map - not final
-function initMap() {
+/*function initMap() {
     var mapOptions = {
         center: new google.maps.LatLng(37.7749, -122.4194),
         zoom: 8,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-}
-
-window.onload = initMap
+}*/
+document.getElementById("floatingButton").addEventListener("click", function() {
+    const mapIframe = document.getElementById("mapIframe");
+    if (mapIframe.style.display === "none" || mapIframe.style.display === "") {
+        mapIframe.style.display = "block";
+    } else {
+        mapIframe.style.display = "none";
+    }
+});
