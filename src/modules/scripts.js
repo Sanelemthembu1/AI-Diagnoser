@@ -272,7 +272,7 @@ document.getElementById('send').addEventListener('click', async function() {
        // console.log(prediction);
         // Simulate bot response
         setTimeout(function() {
-            addBotChat('I see, you typically suffering from __because of __.Feel free to use your map to navigate to the nearest hospital ASAP for treatment!.');
+            addBotChat('I see, you are typically suffering from __because of __.Feel free to use your map to navigate to the nearest hospital ASAP for treatment!.');
         }, 1000);
     
         // Display bot response
